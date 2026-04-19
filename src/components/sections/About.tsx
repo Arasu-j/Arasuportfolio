@@ -71,10 +71,10 @@ export function About() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-royal-dark">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 text-royal-dark">
             About <span className="text-gold">Me</span>
           </h2>
-          <p className="text-royal/70 max-w-2xl mx-auto text-lg">
+          <p className="text-base sm:text-lg text-royal/70 max-w-2xl mx-auto">
             A deep dive into my professional journey and technical proficiencies.
           </p>
         </motion.div>
@@ -90,12 +90,12 @@ export function About() {
             <div className="p-3 bg-slate-50 border border-royal/10 rounded-xl shadow-sm text-gold">
               <Code2 className="w-6 h-6" />
             </div>
-            <h3 className="text-2xl font-bold text-royal-dark">Technical Proficiency</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-royal-dark">Technical Proficiency</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-20">
+          <div className="grid lg:grid-cols-2 gap-8 mb-16 sm:mb-20">
             {/* Left side: Programming Languages (Bar Charts) */}
-            <div className="bg-slate-50 p-8 rounded-3xl shadow-sm border border-royal/10 h-full">
+            <div className="bg-slate-50 p-6 sm:p-8 rounded-3xl shadow-sm border border-royal/10 h-full">
               <h4 className="font-bold text-royal mb-6 border-b border-royal/10 pb-2">Programming Languages</h4>
               <div className="space-y-6">
                 {programmingLanguages.map((skill, idx) => (
@@ -120,11 +120,11 @@ export function About() {
               </div>
             </div>
 
-            {/* Right side: Premium Animated Badges */}
+            {/* Right side: Normal badges for everything else */}
             <div className="flex flex-col gap-6">
-               <div className="bg-slate-50 p-8 rounded-3xl shadow-sm border border-royal/10 flex-1">
-                 <h4 className="font-bold text-royal mb-6 border-b border-royal/10 pb-2">Libraries & Frameworks</h4>
-                 <div className="flex flex-wrap gap-3">
+               <div className="bg-slate-50 p-6 sm:p-8 rounded-3xl shadow-sm border border-royal/10 flex-1">
+                 <h4 className="font-bold text-royal mb-4 border-b border-royal/10 pb-2">Libraries & Frameworks</h4>
+                 <div className="flex flex-wrap gap-2">
                    {frameworks.map((fw, idx) => (
                      <motion.div 
                        key={idx} 
@@ -142,9 +142,9 @@ export function About() {
                  </div>
                </div>
 
-               <div className="bg-slate-50 p-8 rounded-3xl shadow-sm border border-royal/10">
-                 <h4 className="font-bold text-royal mb-6 border-b border-royal/10 pb-2">Databases</h4>
-                 <div className="grid grid-cols-2 gap-4">
+               <div className="bg-slate-50 p-6 sm:p-8 rounded-3xl shadow-sm border border-royal/10">
+                 <h4 className="font-bold text-royal mb-4 border-b border-royal/10 pb-2">Databases</h4>
+                 <div className="flex flex-wrap gap-2">
                    {databases.map((db, idx) => (
                      <motion.div 
                        key={idx}
@@ -153,7 +153,7 @@ export function About() {
                        viewport={{ once: true }}
                        transition={{ delay: 0.4 + (idx * 0.15), type: "spring", stiffness: 200 }}
                        whileHover={{ scale: 1.05, rotate: 2 }}
-                       className="flex items-center justify-center p-4 bg-white rounded-2xl border border-royal/10 hover:bg-royal hover:text-white transition-all shadow-sm group cursor-pointer"
+                       className="flex items-center justify-center px-6 py-3 bg-white rounded-2xl border border-royal/10 hover:bg-royal hover:text-white transition-all shadow-sm group cursor-pointer"
                      >
                        <span className="font-bold text-royal-dark group-hover:text-white transition-colors">{db}</span>
                      </motion.div>
@@ -161,9 +161,9 @@ export function About() {
                  </div>
                </div>
 
-               <div className="bg-slate-50 p-8 rounded-3xl shadow-sm border border-royal/10">
-                 <h4 className="font-bold text-royal mb-6 border-b border-royal/10 pb-2">Development & AI Tools</h4>
-                 <div className="flex flex-wrap gap-2.5">
+               <div className="bg-slate-50 p-6 sm:p-8 rounded-3xl shadow-sm border border-royal/10">
+                 <h4 className="font-bold text-royal mb-4 border-b border-royal/10 pb-2">Development & AI Tools</h4>
+                 <div className="flex flex-wrap gap-2">
                    {tools.map((tool, idx) => (
                      <motion.span 
                        key={idx}
